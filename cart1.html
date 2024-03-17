@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Home - Meghana E-Commerce Website</title>
+     <style>
+        /* Resetting default browser styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Navigation */
+        .top_nav {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+        }
+
+        .top_nav_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tap_nav_p {
+            margin-right: 10px;
+        }
+
+        .top_nav_link {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .nav_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav_logo {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .nav_list {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav_item {
+            margin-right: 20px;
+        }
+
+        .nav_link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav_items {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav_input {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .nav_search {
+            width: 20px;
+            margin-left: -25px;
+        }
+
+        .nav_heart,
+        .nav_cart {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        /* Mobile Navigation */
+        .mobile_nav {
+            display: none;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .mobile_nav_list {
+            list-style: none;
+        }
+
+        .mobile_nav_item {
+            margin-bottom: 10px;
+        }
+
+        .mobile_nav_link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Header */
+        .header {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header_filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .header_filter_link {
+            padding: 5px 10px;
+            margin: 5px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .header_img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Products */
+        #productList {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .productItem {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .productItem:hover {
+            transform: translateY(-5px);
+        }
+
+        .productItem button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .productItem button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Services */
+        .services_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .service {
+            flex: 1;
+            text-align: center;
+        }
+
+        .service_img {
+            width: 80px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .footer_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer_item {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .footer_item_titl {
+            margin-bottom: 10px;
+        }
+
+        .footer_list_item {
+            margin-bottom: 5px;
+        }
+
+        .footer_bottom {
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        .footer_copy {
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="top_nav">
+      <div class="container top_nav_container">
+        <div class="top_nav_wrapper">
+          <p class="tap_nav_p">
+            Summer Sale For All And Free Express Delivery - OFF 50%!
+          </p>
+          <a href="#" class="top_nav_link">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="container nav_container">
+        <a href="#" class="nav_logo">Shopper's Stop</a>
+        <ul class="nav_list">
+          <li class="nav_item"><a href="/" class="nav_link">Home</a></li>
+          <li class="nav_item"><a href="#About" class="nav_link">About</a></li>
+          <li class="nav_item"><a href="#Contact" class="nav_link">Contact</a></li>
+          <li class="nav_item">
+            <a href="register.php" class="nav_link">Sign up</a>
+          </li>
+          <li class="nav_item">
+            <a href="index.php" class="nav_link">Login</a>
+          </li>
+        </ul>
+        
+        <div class="nav_items">
+          <form action="#" class="nav_form">
+            <input
+              type="text"
+              class="nav_input"
+              placeholder="search here...." />
+            <img src="./image/search.png" alt="" class="nav_search" />
+          </form>
+          <img src="./image/heart.png" alt="" class="nav_heart" />
+          <a href="cart.html">
+            <img src="./image/cart.png" alt="" class="nav_cart" />
+          </a>
+          <li class="nav_item">
+            <a href="logout.php" class="nav_link">Logout</a>
+          </li>
+        </div>
+        <span class="hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </span>
+      </div>
+    </nav>
+    <nav class="mobile_nav mobile_nav_hide">
+      <ul class="mobile_nav_list">
+        <li class="mobile_nav_item">
+          <a href="/" class="mobile_nav_link">Home</a>
+        </li>
+        <li class="mobile_nav_item">
+          <a href="#" class="mobile_nav_link">About</a>
+        </li>
+        <li class="mobile_nav_item">
+          <a href="#" class="mobile_nav_link">Contact</a>
+        </li>
+        <li class="mobile_nav_item">
+          <a href="register.php" class="mobile_nav_link">Sign Up</a>
+        </li>
+        <li class="mobile_nav_item">
+          <a href="cart.html" class="mobile_nav_link">Cart</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="container header_container">
+        <div class="header_filter">
+          <a href="#" class="header_filter_link">Woman’s Fashion</a>
+          <a href="#" class="header_filter_link">Men’s Fashion</a>
+          <a href="#" class="header_filter_link">Electronics</a>
+          <a href="#" class="header_filter_link">Home & Lifestyle</a>
+          <a href="#" class="header_filter_link">Medicine</a>
+          <a href="#" class="header_filter_link">Sports & Outdoor</a>
+          <a href="#" class="header_filter_link">Baby’s & Toys</a>
+          <a href="#" class="header_filter_link">Groceries & Pets</a>
+          <a href="#" class="header_filter_link">Health & Beauty</a>
+        </div>
+        <img src="./image/header1.png" alt="" class="header_img" />
+      </div>
+    </header>
+
+    <h1>Products</h1>
+    <div id="productList">
+        <!-- Products will be displayed here -->
+    </div>
+
+    <div id="cartList" style="display: none;">
+        <!-- Cart will be displayed here -->
+    </div>
+
+    <script>
+        // Function to fetch products from the service
+        function fetchProducts() {
+            fetch('/E-Commerce-Website-Main/user_management.php/products')
+                .then(response => response.json())
+                .then(data => {
+                    const productList = document.getElementById('productList');
+                    productList.innerHTML = ''; // Clear previous content
+
+                    if (data.products.length > 0) {
+                        data.products.forEach(product => {
+                            const productItem = document.createElement('div');
+                            productItem.innerHTML = `
+                                <p><strong>Product ID:</strong> ${product.product_id}</p>
+                                <p><strong>Name:</strong> ${product.name}</p>
+                                <p><strong>Price:</strong> ${product.price}</p>
+                                <img src=${product.pic} style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;">
+                                <button onclick="addToCart(${product.product_id})">Add to Cart</button>
+                                <hr>
+                            `;
+                            productList.appendChild(productItem);
+                        });
+                    } else {
+                        productList.innerHTML = '<p>No products found.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching products:', error);
+                    document.getElementById('productList').innerHTML = '<p>Error fetching products. Please try again later.</p>';
+                });
+        }
+
+    
+        function addToCart(productId) {
+            fetch('/E-Commerce-Website-Main/user_management.php/cart', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ product_id: productId }) // Pass only the product ID
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message); // Display success message
+            })
+            .catch(error => {
+                console.error('Error adding product to cart:', error);
+                alert('Error adding product to cart. Please try again later.');
+            });
+        }
+
+
+        // Call fetchProducts when the page loads
+        window.onload = fetchProducts;
+    </script>
+    <br>
+    <section class="section">
+      <div class="container services_container">
+        <div class="service">
+          <img src="./image/icons/service-1.png" alt="" class="service_img" />
+          <h3 class="service_title">FAST AND FREE DELIVERY</h3>
+          <p class="service_p"></p>
+        </div>
+        <div class="service">
+          <img src="./image/icons/service-2.png" alt="" class="service_img" />
+          <h3 class="service_title">24/7 SUPPORT</h3>
+          <p class="service_p"></p>
+        </div>
+        <div class="service">
+          <img src="./image/icons/service-3.png" alt="" class="service_img" />
+          <h3 class="service_title">MONEY BACK GUARANTY</h3>
+          <p class="service_p"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer_container">
+        <div class="footer_item">
+          <h2 href="#" class="footer_logo">Exclusive</h2>
+          <div class="footer_p">
+            
+          </div>
+        </div>
+        <div class="footer_item">
+          <h3 class="footer_item_titl">Support</h3>
+          <ul class="footer_list">
+            <li class="li footer_list_item">Andhra Pradesh, India</li>
+            <li class="li footer_list_item">email@gmail.com</li>
+            <li class="li footer_list_item">+0123456789</li>
+            <li class="li footer_list_item">+9876543210</li>
+          </ul>
+        </div>
+        <div class="footer_item">
+          <h3 class="footer_item_titl">Support</h3>
+          <ul class="footer_list">
+            <li class="li footer_list_item">Account</li>
+            <li class="li footer_list_item">Login / Register</li>
+            <li class="li footer_list_item">Cart</li>
+            <li class="li footer_list_item">Shop</li>
+          </ul>
+        </div>
+        <div class="footer_item">
+          <h3 class="footer_item_titl">Support</h3>
+          <ul class="footer_list">
+            <li class="li footer_list_item">Privacy policy</li>
+            <li class="li footer_list_item">Terms of use</li>
+            <li class="li footer_list_item">FAQ's</li>
+            <li class="li footer_list_item">Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="container footer_bottom_container">
+          <p class="footer_copy">
+            Copyright Exclusive 2023. All right reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  </body>
+</html>
+
